@@ -4,7 +4,11 @@ import QRCode from "qrcode.react";
 const QrDisplay = observer(({ userStore }) => {
   return (
     <div>
-      <QRCode value={userStore.linkUrl} renderAs="svg" />
+      <QRCode
+        className="border border-white"
+        value={userStore.linkUrl}
+        renderAs="svg"
+      />
     </div>
   );
 });
