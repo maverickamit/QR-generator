@@ -1,10 +1,11 @@
 import "./App.css";
-var QRCode = require("qrcode.react");
-
+import QrDisplay from "./components/QrDisplay/QrDisplay";
+import LinkInput from "./components/LinkInput/LinkInput";
 function App() {
   return (
     <div className="App">
-      <QRCode value="http://facebook.github.io/react/" />
+      <LinkInput />
+      <QrDisplay />
     </div>
   );
 }
