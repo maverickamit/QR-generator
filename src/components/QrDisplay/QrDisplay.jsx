@@ -1,12 +1,12 @@
-import React from "react";
-
+import { observer } from "mobx-react-lite"; // Or "mobx-react".
 import QRCode from "qrcode.react";
 
-function QrDisplay() {
+const QrDisplay = observer(({ userStore }) => {
   return (
     <div>
-      <QRCode value="http://facebook.github.io/react/" renderAs="svg" />
+      <QRCode value={userStore.linkUrl} renderAs="svg" />
     </div>
   );
-}
+});
+
 export default QrDisplay;
