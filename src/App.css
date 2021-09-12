@@ -1,10 +1,6 @@
 .App {
   text-align: center;
-}
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
+  height: 100vh;
 }
 
 h1 {
@@ -54,7 +50,6 @@ label {
 
 button[type="submit"],
 input[type="submit"] {
-  background: #ec5990;
   color: white;
   text-transform: uppercase;
   border: none;
@@ -63,11 +58,6 @@ input[type="submit"] {
   font-size: 16px;
   font-weight: 100;
   letter-spacing: 10px;
-}
-
-button[type="submit"]:hover,
-input[type="submit"]:hover {
-  background: #bf1650;
 }
 
 button[type="submit"]:active,
@@ -87,39 +77,11 @@ input[type="button"]:hover {
   transition: 0.3s all;
 }
 
-button[type="submit"],
-input[type="button"],
-input[type="submit"] {
-  -webkit-appearance: none;
-}
-
-.App {
+form {
   max-width: 600px;
   margin: 0 auto;
 }
 
-button[type="button"] {
-  display: block;
-  appearance: none;
-  background: #333;
-  color: white;
-  border: none;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 4px;
-}
-
 hr {
   margin-top: 30px;
-}
-
-button {
-  display: block;
-  appearance: none;
-  margin-top: 40px;
-  border: 1px solid #333;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 4px;
 }
