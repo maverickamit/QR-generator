@@ -8,13 +8,14 @@ const TextInput = observer(({ userStore }) => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => userStore.setQrData(data.message);
+
   return (
     <div>
       <h4 className="mt-3">Text</h4>
-      <h5 className="mb-3">Message</h5>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <label htmlFor="message">Message</label>
         <input {...register("message", { required: true })} />
-        {errors.url && <span>This field is required</span>}
+        {errors.message && <span>This field is required</span>}
         <input className="btn-primary" type="submit" value="submit" />
       </form>
     </div>

@@ -11,8 +11,8 @@ const LinkInput = observer(({ userStore }) => {
   return (
     <div>
       <h4 className="mt-3">Link</h4>
-      <h5 className="mb-3">URL</h5>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <label htmlFor="url">URL</label>
         <input {...register("url", { required: true })} />
         {errors.url && <span>This field is required</span>}
         <input className="btn-primary" type="submit" value="submit" />
