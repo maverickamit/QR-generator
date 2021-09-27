@@ -10,8 +10,8 @@ const LinkInput = observer(({ userStore }) => {
   const onSubmit = (data) => userStore.setLinkUrl(data.url);
   return (
     <div>
-      <h2>Link</h2>
-      <h3>URL</h3>
+      <h4 className="mt-3">Link</h4>
+      <h5 className="mb-3">URL</h5>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("url", { required: true })} />
         {errors.url && <span>This field is required</span>}
