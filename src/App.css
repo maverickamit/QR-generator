@@ -85,3 +85,8 @@ form {
 hr {
   margin-top: 30px;
 }
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
