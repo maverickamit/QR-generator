@@ -1,6 +1,7 @@
 import "./App.css";
 import QrDisplay from "./components/QrDisplay/QrDisplay";
 import LinkInput from "./components/LinkInput/LinkInput";
+import TextInput from "./components/TextInput/TextInput";
 import Navigation from "./components/Navigation/Navigation";
 import TopMenuBar from "./components/TopMenuBar/TopMenuBar";
 import { observer } from "mobx-react-lite";
@@ -19,6 +20,7 @@ const App = observer(({ userStore }) => {
       <TopMenuBar userStore={userStore} />
       <Router>
         <LinkInput userStore={userStore} path="/link" />
+        <TextInput userStore={userStore} path="/text" />
         <LinkInput userStore={userStore} path="/" />
       </Router>
       <QrDisplay userStore={userStore} />

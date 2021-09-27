@@ -34,7 +34,7 @@ const QrDisplay = observer(({ userStore }) => {
       <div className="p-3">
         <QRCode
           id="qrCode"
-          value={userStore.linkUrl}
+          value={userStore.qrData}
           renderAs="svg"
           size="200"
           includeMargin={true}

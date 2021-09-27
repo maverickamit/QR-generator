@@ -1,14 +1,16 @@
 import { makeAutoObservable } from "mobx";
 
 export class UserStore {
-  linkUrl = "";
+  qrData = "";
   darkMode = true;
-
   constructor() {
     makeAutoObservable(this);
   }
-  setLinkUrl(linkUrl) {
-    this.linkUrl = linkUrl;
+  setQrData(qrData) {
+    this.qrData = qrData;
+  }
+  setTextMessage(textMessage) {
+    this.textMessage = textMessage;
   }
   setDarkMode(darkMode) {
     this.darkMode = darkMode;
