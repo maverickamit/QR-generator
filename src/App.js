@@ -3,6 +3,7 @@ import QrDisplay from "./components/QrDisplay/QrDisplay";
 import LinkInput from "./components/LinkInput/LinkInput";
 import TextInput from "./components/TextInput/TextInput";
 import EmailInput from "./components/EmailInput/EmailInput";
+import PhoneInput from "./components/PhoneInput/PhoneInput";
 import Navigation from "./components/Navigation/Navigation";
 import TopMenuBar from "./components/TopMenuBar/TopMenuBar";
 import { observer } from "mobx-react-lite";
@@ -23,7 +24,7 @@ const App = observer(({ userStore }) => {
         <LinkInput userStore={userStore} path="/link" />
         <TextInput userStore={userStore} path="/text" />
         <EmailInput userStore={userStore} path="/email" />
-
+        <PhoneInput userStore={userStore} path="/phone" />
         <LinkInput userStore={userStore} path="/" />
       </Router>
       <QrDisplay userStore={userStore} />
