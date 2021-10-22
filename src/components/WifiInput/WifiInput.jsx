@@ -16,10 +16,20 @@ const WifiInput = observer(({ userStore }) => {
     <div>
       <h4 className="mt-3">Wifi</h4>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="networkname">Network name</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : ""
+        }
+        htmlFor="networkname">Network name</label>
         <input {...register("networkname", { required: true })} />
         {errors.networkname && <span>This field is required</span>}
-        <label htmlFor="networktype">Network type</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : "" 
+        }
+        htmlFor="networktype">Network type</label>
         <select
           class="form-select custom-select"
           name="networktype"
@@ -29,7 +39,12 @@ const WifiInput = observer(({ userStore }) => {
           <option value="WPA">WPA/WPA2</option>
           <option value="">No encryption</option>
         </select>
-        <label htmlFor="password">Password</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : "" 
+        } 
+        htmlFor="password">Password</label>
         <input {...register("password")} />
         <input className="btn-primary" type="submit" value="submit" />
       </form>

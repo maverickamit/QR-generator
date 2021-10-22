@@ -30,7 +30,7 @@ const QrDisplay = observer(({ userStore }) => {
   };
 
   return (
-    <div>
+    <div className="pb-5">
       <div className="p-3">
         <QRCode
           id="qrCode"

@@ -15,12 +15,27 @@ const EmailInput = observer(({ userStore }) => {
     <div>
       <h4 className="mt-3">Email</h4>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="sendto">Send To</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : ""
+      }
+      htmlFor="sendto">Send To</label>
         <input {...register("sendto", { required: true })} />
         {errors.sendto && <span>This field is required</span>}
-        <label htmlFor="subject">Subject</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : "" 
+        }
+        htmlFor="subject">Subject</label>
         <input {...register("subject")} />
-        <label htmlFor="text">Text</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : "" 
+        } 
+        htmlFor="text">Text</label>
         <input {...register("text")} />
         <input className="btn-primary" type="submit" value="submit" />
       </form>

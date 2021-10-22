@@ -15,8 +15,8 @@ const App = observer(({ userStore }) => {
     <div
       className={
         userStore.darkMode !== true
-          ? "App container-fluid bg-white"
-          : "App container-fluid bg-dark text-light"
+          ? "App container-fluid bg-white fill-height"
+          : "App container-fluid bg-dark text-light fill-height"
       }
     >
       <Navigation userStore={userStore} />

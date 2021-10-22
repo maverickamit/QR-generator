@@ -13,7 +13,12 @@ const TextInput = observer(({ userStore }) => {
     <div>
       <h4 className="mt-3">Text</h4>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="message">Message</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : "" 
+        } 
+        htmlFor="message">Message</label>
         <input {...register("message", { required: true })} />
         {errors.message && <span>This field is required</span>}
         <input className="btn-primary" type="submit" value="submit" />

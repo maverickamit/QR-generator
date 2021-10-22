@@ -13,7 +13,12 @@ const PhoneInput = observer(({ userStore }) => {
     <div>
       <h4 className="mt-3">Phone</h4>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="coutrycode">Country code</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : "" 
+        }
+        htmlFor="coutrycode">Country code</label>
         <select
           class="custom-select"
           name="countrycode"
@@ -747,7 +752,12 @@ const PhoneInput = observer(({ userStore }) => {
           </option>
         </select>
         {errors.countrycode && <span>This field is required</span>}
-        <label htmlFor="phone">Phone number</label>
+        <label className={
+        userStore.darkMode !== true
+          ? "text-dark"
+          : "" 
+        }
+        htmlFor="phone">Phone number</label>
         <input {...register("phone", { required: true })} />
         {errors.phone && <span>This field is required</span>}
         <input className="btn-primary" type="submit" value="submit" />
