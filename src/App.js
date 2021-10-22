@@ -4,7 +4,8 @@ import LinkInput from "./components/LinkInput/LinkInput";
 import TextInput from "./components/TextInput/TextInput";
 import EmailInput from "./components/EmailInput/EmailInput";
 import PhoneInput from "./components/PhoneInput/PhoneInput";
-import WifiInput from "./components/WifiInput/WifiInput"
+import WifiInput from "./components/WifiInput/WifiInput";
+import PaypalInput from "./components/PaypalInput/PaypalInput";
 import Navigation from "./components/Navigation/Navigation";
 import TopMenuBar from "./components/TopMenuBar/TopMenuBar";
 import { observer } from "mobx-react-lite";
@@ -27,6 +28,7 @@ const App = observer(({ userStore }) => {
         <EmailInput userStore={userStore} path="/email" />
         <PhoneInput userStore={userStore} path="/phone" />
         <WifiInput userStore={userStore} path="/wifi" />
+        <PaypalInput userStore={userStore} path="/paypal" />
         <LinkInput userStore={userStore} path="/" />
       </Router>
       <QrDisplay userStore={userStore} />
