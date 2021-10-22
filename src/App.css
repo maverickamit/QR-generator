@@ -1,4 +1,7 @@
 
+.text-dark{
+  font-weight: 400!important;
+}
 .fill-height {
   height:auto !important;
 }
